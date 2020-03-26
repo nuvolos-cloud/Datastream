@@ -323,7 +323,7 @@ class Datastream:
                                                   verify=self.sslCer).json()
                  else:
                      json_Response = requests.post(getDataBundle_url, json=json_dataRequest,
-                                                  verify=self.certfile.name).json()
+                                                  verify=self.certfile).json()
                  #print(json_Response)
                  response_dataframe = self._format_bundle_response(json_Response)
                  return response_dataframe
