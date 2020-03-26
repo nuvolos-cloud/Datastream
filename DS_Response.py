@@ -256,7 +256,7 @@ class Datastream:
                                                   verify=self._sslCer).json()
             else:
                 json_Response = requests.post(token_url, json=json_tokenReq,
-                                                  verify=self.certfile.name).json()
+                                                  verify=self.certfile).json()
                 
             
             return json_Response
