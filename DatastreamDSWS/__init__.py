@@ -265,7 +265,7 @@ class Datastream:
                                                   verify=self._sslCer).json()
                 else:
                     json_Response = requests.post(getData_url, json=json_dataRequest,
-                                                  verify=self.certfile.name).json()
+                                                  verify=self.certfile).json()
                 #print(json_Response)
                 #format the JSON response into readable table
                 response_dataframe = self._format_Response(json_Response['DataResponse'])
